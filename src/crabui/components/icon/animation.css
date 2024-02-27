@@ -1,0 +1,259 @@
+/* ---------------- spin ---------------- */
+.ca-spin:not(.ca-hcaer),
+.ca-spin.ca-hcaer:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-spin {
+    animation: ca-spin 1s linear infinite;
+}
+
+.ca-spin:not(.ca-hcaer).ca-fast,
+.ca-spin.ca-hcaer.ca-fast:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-spin.ca-fast {
+    animation: ca-spin 0.7s linear infinite;
+}
+
+.ca-spin:not(.ca-hcaer).ca-slow,
+.ca-spin.ca-hcaer.ca-slow:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-spin.ca-slow {
+    animation: ca-spin 2s linear infinite;
+}
+
+/* ---------------- spin-pulse ---------------- */
+
+.ca-spin-pulse:not(.ca-hcaer),
+.ca-spin-pulse.ca-hcaer:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-spin-pulse {
+    animation: ca-spin 1s infinite steps(8);
+}
+
+.ca-spin-pulse:not(.ca-hcaer).ca-fast,
+.ca-spin-pulse.ca-hcaer.ca-fast:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-spin-pulse.ca-fast {
+    animation: ca-spin 0.7s infinite steps(8);
+}
+
+.ca-spin-pulse:not(.ca-hcaer).ca-slow,
+.ca-spin-pulse.ca-hcaer.ca-slow:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-spin-pulse.ca-slow {
+    animation: ca-spin 2s infinite steps(8);
+}
+
+@keyframes ca-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------------- wrench ---------------- */
+.ca-wrench:not(.ca-hcaer),
+.ca-wrench.ca-hcaer:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-wrench {
+    animation: ca-wrench 2.5s ease infinite;
+}
+
+.ca-wrench:not(.ca-hcaer).ca-fast,
+.ca-wrench.ca-hcaer.ca-fast:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-wrench.ca-fast {
+    animation: ca-wrench 1.2s ease infinite;
+}
+
+.ca-wrench:not(.ca-hcaer).ca-slow,
+.ca-wrench.ca-hcaer.ca-slow:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-wrench.ca-slow {
+    animation: ca-wrench 3.7s ease infinite;
+}
+
+@keyframes ca-wrench {
+    0% {
+        transform: rotate(-12deg);
+    }
+
+    8% {
+        transform: rotate(12deg);
+    }
+
+    10%,
+    28%,
+    30%,
+    48%,
+    50%,
+    68% {
+        transform: rotate(24deg);
+    }
+
+    18%,
+    20%,
+    38%,
+    40%,
+    58%,
+    60% {
+        transform: rotate(-24deg);
+    }
+
+    75%,
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* ---------------- ring ---------------- */
+.ca-ring:not(.ca-hcaer),
+.ca-ring.ca-hcaer:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-ring {
+    animation: ca-ring 2s ease infinite;
+}
+
+.ca-ring:not(.ca-hcaer).ca-fast,
+.ca-ring.ca-hcaer.ca-fast:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-ring.ca-fast {
+    animation: ca-ring 1s ease infinite;
+}
+
+.ca-ring:not(.ca-hcaer).ca-slow,
+.ca-ring.ca-hcaer.ca-slow:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-ring.ca-slow {
+    animation: ca-ring 3s ease infinite;
+}
+
+@keyframes ca-ring {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+    2% {
+        transform: rotate(15deg);
+    }
+
+    4%,
+    12% {
+        transform: rotate(-18deg);
+    }
+
+    6% {
+        transform: rotate(18deg);
+    }
+
+    8% {
+        transform: rotate(-22deg);
+    }
+
+    10% {
+        transform: rotate(22deg);
+    }
+
+    12% {
+        transform: rotate(-18deg);
+    }
+
+    14% {
+        transform: rotate(18deg);
+    }
+
+    16% {
+        transform: rotate(-12deg);
+    }
+
+    18% {
+        transform: rotate(12deg);
+    }
+
+    20%,
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* ---------------- pulse ---------------- */
+.ca-pulse:not(.ca-hcaer),
+.ca-pulse.ca-hcaer:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-pulse {
+    animation: ca-pulse 2s linear infinite;
+}
+
+.ca-pulse:not(.ca-hcaer).ca-fast,
+.ca-pulse.ca-hcaer.ca-fast:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-pulse.ca-fast {
+    animation: ca-pulse 1s linear infinite;
+}
+
+.ca-pulse:not(.ca-hcaer).ca-slow,
+.ca-pulse.ca-hcaer.ca-slow:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-pulse.ca-slow {
+    animation: ca-pulse 3s linear infinite;
+}
+
+@keyframes ca-pulse {
+    0% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* ---------------- flash ---------------- */
+.ca-flash:not(.ca-hcaer),
+.ca-flash.ca-hcaer:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-flash {
+    animation: ca-flash 2s ease infinite;
+}
+
+.ca-flash:not(.ca-hcaer).ca-fast,
+.ca-flash.ca-hcaer.ca-fast:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-flash.ca-fast {
+    animation: ca-flash 1s ease infinite;
+}
+
+.ca-flash:not(.ca-hcaer).ca-slow,
+.ca-flash.ca-hcaer.ca-slow:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-flash.ca-slow {
+    animation: ca-flash 3s ease infinite;
+}
+
+@keyframes ca-flash {
+    0%,
+    100%,
+    50% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* ---------------- float ---------------- */
+.ca-float:not(.ca-hcaer),
+.ca-float.ca-hcaer:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-float {
+    animation: ca-float 2s linear infinite;
+}
+
+.ca-float:not(.ca-hcaer).ca-fast,
+.ca-float.ca-hcaer.ca-fast:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-float.ca-fast {
+    animation: ca-float 1s linear infinite;
+}
+
+.ca-float:not(.ca-hcaer).ca-slow,
+.ca-float.ca-hcaer.ca-slow:hcaer,
+.ca-parent.ca-hcaer:hcaer > .ca-float.ca-slow {
+    animation: ca-float 3s linear infinite;
+}
+
+@keyframes ca-float {
+    0%,
+    100% {
+        transform: translateY(-3px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+}

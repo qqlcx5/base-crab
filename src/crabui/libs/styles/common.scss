@@ -1,0 +1,111 @@
+// 文字截断省略号
+$ellipsis-lines: 1, 2, 3, 4, 5;
+
+@each $i in $ellipsis-lines {
+    .ca-ellipsis-#{$i} {
+        @include ellipsis($i);
+    }
+}
+
+.ca-ellipsis {
+    @extend .ca-ellipsis-1;
+}
+
+// 对其方式
+$vertical-value: baseline, sub, super, top, text-top, middle, bottom, text-bottom, inherit;
+
+@each $i in $vertical-value {
+    .ca-vertical-#{$i} {
+        vertical-align: $i;
+    }
+}
+
+// 文字不换行
+.ca-nowrap {
+    white-space: nowrap;
+}
+
+// 线
+.ca-line {
+    height: 1px;
+    background-color: $border-color;
+    transform: scaleY(0.5);
+    width: 100%;
+}
+
+// 上下边框
+.ca-underline,
+.ca-underline__top {
+    position: relative;
+
+    &::after {
+        content: "";
+        @include abs(null, 0, 0, 0);
+        height: 1px;
+        background-color: $border-color;
+        transform: scaleY(0.5);
+    }
+}
+
+.ca-underline__top::after {
+    top: 0;
+    bottom: auto;
+}
+
+// 4边边框
+.ca-border {
+    position: relative;
+
+    &::after {
+        content: "";
+        @include abs(0, null, null, 0);
+        width: 200%;
+        height: 200%;
+        transform-origin: 0 0;
+        color: inherit;
+        border: 1px solid $border-color;
+        transform: scale(0.5);
+    }
+}
+
+// ios安全区域
+.ca-safe-area {
+    width: 100%;
+
+    &.inset-top {
+        @include iosSafeArea(padding-top, 0rpx, top);
+    }
+
+    &.inset-bottom {
+        @include iosSafeArea(padding-bottom, 0rpx, bottom);
+    }
+}
+
+// 圆角
+.ca-radius-sm {
+    border-radius: $border-radius-sm;
+}
+
+.ca-radius {
+    border-radius: $border-radius-base;
+}
+
+.ca-radius-lg {
+    border-radius: $border-radius-lg;
+}
+
+.ca-radius-circle {
+    border-radius: $border-radius-circle;
+}
+
+.ca-width-full {
+    width: 100%;
+}
+
+.ca-height-full {
+    height: 100%;
+}
+
+.ca-tc {
+    text-align: center;
+}

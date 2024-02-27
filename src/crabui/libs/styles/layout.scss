@@ -1,0 +1,92 @@
+.ca-flex {
+    @include flex;
+}
+
+.ca-flex-column {
+    @include flex(column);
+}
+
+.ca-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.ca-reverse {
+    flex-direction: row-reverse;
+}
+
+.ca-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.ca-justify-between {
+    justify-content: space-between;
+}
+
+.ca-justify-around {
+    justify-content: space-around;
+}
+
+.ca-justify-end {
+    justify-content: flex-end;
+}
+
+.ca-align-center {
+    align-items: center;
+}
+
+.ca-align-start {
+    align-items: flex-start;
+}
+
+.ca-align-end {
+    align-items: flex-end;
+}
+
+.ca-justify-center {
+    justify-content: center;
+}
+
+.ca-self-start{
+    align-self: flex-start;
+}
+
+.ca-self-center{
+    align-self: center;
+}
+
+.ca-self-end{
+    align-self: flex-end
+}
+
+.ca-flex-ajcenter{
+    @extend .ca-flex;
+    @extend .ca-justify-center;
+    @extend .ca-align-center;
+}
+
+.ca-flex-column-ajcenter{
+    @extend .ca-flex-column;
+    @extend .ca-justify-center;
+    @extend .ca-align-center;
+}
+
+.ca-row {
+    @include flex(row);
+    flex-wrap: wrap;
+}
+@for $i from 1 through 12 {
+    .ca-col-#{$i} {
+        flex: 0 0 calc(#{100 * $i + "%"} / 12);
+        min-width: 0;
+    }
+    @if $i <= 6 {
+        .ca-flex-#{$i} {
+            flex: #{$i};
+            min-width: 0;
+        }
+        .ca-flex-column > .ca-flex-#{$i} {
+            min-width: auto;
+            min-height: 0;
+        }
+    }
+}

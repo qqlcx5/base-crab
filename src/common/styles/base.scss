@@ -1,0 +1,30 @@
+page {
+    background-color: #FAFAFA;
+}
+
+.selling-price {
+    font-weight: bold;
+    color: var(--color-secondary);
+
+    &__unit {
+        &--point {
+            font-size: 66.666667%;
+            line-height: 1.8;
+        }
+
+        &--pointPlus {
+            font-size: 90%;
+            line-height: 1.25;
+            padding: 0 2rpx;
+        }
+    }
+}
+
+.market-price {
+    color: $text-color-grey;
+    text-decoration: line-through;
+}
+
+.clear-blank-gap {
+    font-size: 0;
+}

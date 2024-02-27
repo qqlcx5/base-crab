@@ -1,0 +1,82 @@
+// 字体颜色
+.ca-primary {
+    color: $color-primary;
+}
+
+.ca-info {
+    color: $color-info;
+}
+
+.ca-success {
+    color: $color-success;
+}
+
+.ca-warning {
+    color: $color-warning;
+}
+
+.ca-danger {
+    color: $color-danger;
+}
+
+.ca-text {
+    color: $text-color;
+}
+
+.ca-sub-text {
+    color: $sub-text-color;
+}
+
+.ca-inverse {
+    color: $text-inverse-color;
+}
+
+.ca-grey {
+    color: $text-color-grey;
+}
+
+.ca-placeholder {
+    color: $text-color-placeholder;
+}
+
+.ca-disabled {
+    color: $text-color-disable;
+}
+
+.ca-white {
+    color: #fff;
+}
+
+.ca-black {
+    color: #101010;
+}
+
+// 背景颜色
+.ca-primary-bg {
+    background-color: $color-primary;
+}
+
+.ca-info-bg {
+    background-color: $color-info;
+}
+
+.ca-success-bg {
+    background-color: $color-success;
+}
+
+.ca-warning-bg {
+    background-color: $color-warning;
+}
+
+.ca-danger-bg {
+    background-color: $color-danger;
+}
+
+.ca-bg {
+    background-color: $bg-color;
+}
+
+
+.ca-white-bg {
+    background-color: #fff;
+}

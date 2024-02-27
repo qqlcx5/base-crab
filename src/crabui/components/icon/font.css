@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "crabUI";
+    /* Project id 2303975 */
+    src: url('https://at.alicdn.com/t/font_2303975_813zhl05sn5.woff2?t=1652695630620') format('woff2'),
+        url('https://at.alicdn.com/t/font_2303975_813zhl05sn5.woff?t=1652695630620') format('woff'),
+        url('https://at.alicdn.com/t/font_2303975_813zhl05sn5.ttf?t=1652695630620') format('truetype');
+}
+
+.crabUI {
+    font-family: "crabUI" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
