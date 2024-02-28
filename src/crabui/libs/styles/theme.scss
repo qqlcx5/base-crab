@@ -55,10 +55,10 @@ $input-line-size: 1px;
 $input-line-color: #ededed;
 $input-line-inner-size: 2px;
 // 按钮大小
-$button-height-mn: 32rpx;
-$button-height-sm: 48rpx;
-$button-height-base: 76rpx;
-$button-height-lg: 88rpx;
+$button-height-mn: 48rpx;
+$button-height-sm: 64rpx;
+$button-height-base: 80rpx;
+$button-height-lg: 96rpx;
 
 /* 文字尺寸 */
 $font-mn: 24rpx;
@@ -68,10 +68,10 @@ $font-lg: 36rpx;
 $font-xl: 48rpx;
 
 /* Border Radius */
-$border-radius-mn: 8rpx;
-$border-radius-sm: 12rpx;
-$border-radius-base: 20rpx;
-$border-radius-lg: 24rpx;
+$border-radius-mn: 4rpx;
+$border-radius-sm: 6rpx;
+$border-radius-base: 10rpx;
+$border-radius-lg: 12rpx;
 $border-radius-circle: 50%;
 
 // form-item

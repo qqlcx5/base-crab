@@ -29,10 +29,11 @@ export default defineConfig({
                 }
             }
         }),
-        // 添加下面这块
+        // 通过include指定要检查的文件路径。这有助于在开发过程中提升代码质量。
         eslintPlugin({
             include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
         }),
+        // 提供对旧版浏览器的支持，targets配置指定了需要兼容的浏览器列表。
         legacy({
             targets: ['defaults', 'not IE 11']
         })

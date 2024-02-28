@@ -55,7 +55,7 @@ export default {
 .demo-page {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 10px;
 
   h2 {

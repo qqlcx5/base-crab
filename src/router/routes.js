@@ -20,9 +20,9 @@ export const routes = [
         })
     },
     {
-        path: '/crab-doc/button',
+        path: '/crabui-doc/button',
         name: 'button',
-        component: __dynamicImportComponent__('@/pages/crab-doc/button.vue', {
+        component: __dynamicImportComponent__('@/pages/crabui-doc/button.vue', {
             pageType: 'top'
         })
     }
