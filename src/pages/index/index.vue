@@ -6,10 +6,8 @@
 </template>
 <script setup>
 const handleTo = () => {
-    uni.navigateTo({
-        url: '/pages/mine/index'
-    });
-};
+
+}
 </script>
 <style>
 page {

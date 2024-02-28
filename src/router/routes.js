@@ -18,4 +18,12 @@ export const routes = [
         component: __dynamicImportComponent__('@/pages/index/index.vue', {
             pageType: 'top'
         })
-    }]
+    },
+    {
+        path: '/crab-doc/button',
+        name: 'button',
+        component: __dynamicImportComponent__('@/pages/crab-doc/button.vue', {
+            pageType: 'top'
+        })
+    }
+]

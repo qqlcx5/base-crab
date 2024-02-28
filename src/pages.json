@@ -1,13 +1,7 @@
 {
   "pages": [
     {
-      "path": "pages/index/index"
-    },
-    {
-      "path": "pages/crab/index"
-    },
-    {
-      "path": "pages/mine/index"
+      "path": "inspect/loading"
     }
   ],
   "easycom": {
