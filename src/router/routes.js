@@ -8,8 +8,6 @@
 import { __dynamicImportComponent__ } from '@/crabui/libs/router'
 export const hotRefresh = {
     mode: process.env.NODE_ENV
-    // to: '/index',
-    // navType: 'pushTab'
 }
 export const routes = [
     {
@@ -20,23 +18,16 @@ export const routes = [
         })
     },
     {
-        path: '/crabui-doc/index',
+        path: '/crabui-doc/example',
         name: 'crabuiDoc',
-        component: __dynamicImportComponent__('@/pages/crabui-doc/index.vue', {
+        component: __dynamicImportComponent__('@/crabui-doc/example/components.vue', {
             pageType: 'top'
         })
     },
     {
-        path: '/crabui-doc/button',
+        path: '/pages/componentsA/button/button',
         name: 'button',
-        component: __dynamicImportComponent__('@/pages/crabui-doc/button.vue', {
-            pageType: 'top'
-        })
-    },
-    {
-        path: '/crabui-doc/cell',
-        name: 'cell',
-        component: __dynamicImportComponent__('@/pages/crabui-doc/cell.vue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsA/button/button.vue', {
             pageType: 'top'
         })
     }
