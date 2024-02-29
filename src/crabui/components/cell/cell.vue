@@ -138,7 +138,9 @@ export default defineComponent({
             }
             if (props.to) {
                 // uni.$ca.jumpPlus(props.to)
-                jump(props.to)
+                setTimeout(() => {
+                    jump(props.to)
+                }, 200)
             } else {
                 emitEvent('click', e)
             }

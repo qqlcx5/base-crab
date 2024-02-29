@@ -20,6 +20,13 @@ export const routes = [
         })
     },
     {
+        path: '/crabui-doc/index',
+        name: 'crabuiDoc',
+        component: __dynamicImportComponent__('@/pages/crabui-doc/index.vue', {
+            pageType: 'top'
+        })
+    },
+    {
         path: '/crabui-doc/button',
         name: 'button',
         component: __dynamicImportComponent__('@/pages/crabui-doc/button.vue', {
