@@ -5,10 +5,14 @@
                 color: 'red',
                 fontSize: '22px'
             }">
-            <ca-cell title="User Profile" icon="ca-shijian1" :cell-style="{ backgroundColor: '#f3f3f3' }" arrow />
-            <ca-cell title="Settings" icon="ca-warning" arrow />
-            <ca-cell title="Notifications" label="描述信息" icon="ca-youxiang" :value="'Enabled'" />
-            <ca-cell title="About" :value="'Version 1.0.0'" :border="false" />
+            <ca-cell title="用户资料" icon="ca-shijian1" :cell-style="{ backgroundColor: '#f3f3f3' }" arrow />
+            <ca-cell
+                :icon-style="{
+                    color: '#07c160',
+                    fontSize: '28px'
+                }" title="设置" icon="ca-warning" arrow />
+            <ca-cell title="通知" label="描述信息" icon="ca-youxiang" :value="'启用'" />
+            <ca-cell title="关于" :value="'版本 1.0.0'" :border="false" />
         </ca-cell-group>
         <ca-cell-group title="分组 title 插槽">
             <ca-cell title="单元格" value="内容" />

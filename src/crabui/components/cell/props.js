@@ -42,6 +42,10 @@ export default {
         type: [String, Number],
         default: ''
     },
+    iconStyle: {
+        type: [Object, String],
+        default: ''
+    },
     // 右侧图标名称，或者图片链接(本地文件建议使用绝对地址)
     rightIcon: {
         type: String,
