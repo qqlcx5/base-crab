@@ -25,5 +25,12 @@ export const routes = [
         component: __dynamicImportComponent__('@/pages/crabui-doc/button.vue', {
             pageType: 'top'
         })
+    },
+    {
+        path: '/crabui-doc/cell',
+        name: 'cell',
+        component: __dynamicImportComponent__('@/pages/crabui-doc/cell.vue', {
+            pageType: 'top'
+        })
     }
 ]

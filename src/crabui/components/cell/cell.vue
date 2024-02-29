@@ -97,6 +97,7 @@ export default defineComponent({
     name: 'CaCell',
     props,
     setup(props) {
+        const { jump } = uni.$ca.useRouter()
         const getProps = useProps('CaCellGroup')
         // 通用的事件句柄
         const emitEvent = useEmit()
@@ -136,7 +137,8 @@ export default defineComponent({
                 perform(e)
             }
             if (props.to) {
-                uni.$ca.jumpPlus(props.to)
+                // uni.$ca.jumpPlus(props.to)
+                jump(props.to)
             } else {
                 emitEvent('click', e)
             }
