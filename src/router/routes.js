@@ -93,7 +93,7 @@ export const routes = [
     {
         path: '/pages/componentsB/badge/badge',
         name: 'badge',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsB/badge/badge.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsB/badge/badge.vue', {
             pageType: 'top'
         })
     },
