@@ -71,6 +71,8 @@ export default defineComponent({
     position: relative;
     width: 80rpx;
     height: 80rpx;
+    // nvue 额外存在 border: 0px solid #000000
+    border: none;
     &--circular {
         .ca-loading {
             &__line {
