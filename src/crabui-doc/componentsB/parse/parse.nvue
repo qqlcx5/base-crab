@@ -45,7 +45,7 @@
 	.u-content {
 		padding: 24rpx;
 		font-size: 32rpx;
-		color: $u-content-color;
+		color: $text-color;
 		line-height: 1.6;
 	}
 </style>

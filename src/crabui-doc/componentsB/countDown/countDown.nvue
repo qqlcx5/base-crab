@@ -6,11 +6,10 @@
 				<u-count-down
 				    :time="30 * 60 * 60 * 1000"
 				    format="HH:mm:ss"
-				    autoStart
+				    auto-start
 				    millisecond
 					@finish="finish"
-				>
-				</u-count-down>
+				/>
 			</view>
 		</view>
 		<view class="u-demo-block">
@@ -19,13 +18,13 @@
 				<u-count-down
 				    :time="30 * 60 * 60 * 1000"
 				    format="DD:HH:mm:ss"
-				    autoStart
+				    auto-start
 				    millisecond
 				    @change="onChange"
 				>
 					<view class="time">
 						<text class="time__item">{{ timeData.days }}&nbsp;天</text>
-						<text class="time__item">{{ timeData.hours>10?timeData.hours:'0'+timeData.hours}}&nbsp;时</text>
+						<text class="time__item">{{ timeData.hours>10?timeData.hours:'0'+timeData.hours }}&nbsp;时</text>
 						<text class="time__item">{{ timeData.minutes }}&nbsp;分</text>
 						<text class="time__item">{{ timeData.seconds }}&nbsp;秒</text>
 					</view>
@@ -38,10 +37,9 @@
 				<u-count-down
 				    :time="30 * 60 * 60 * 1000"
 				    format="HH:mm:ss:SSS"
-				    autoStart
+				    auto-start
 				    millisecond
-				>
-				</u-count-down>
+				/>
 			</view>
 		</view>
 		<view class="u-demo-block">
@@ -50,13 +48,13 @@
 				<u-count-down
 				    :time="30 * 60 * 60 * 1000"
 				    format="HH:mm:ss"
-				    autoStart
+				    auto-start
 				    millisecond
 				    @change="onChange"
 				>
 					<view class="time">
 						<view class="time__custom">
-							<text class="time__custom__item">{{ timeData.hours>10?timeData.hours:'0'+timeData.hours}}</text>
+							<text class="time__custom__item">{{ timeData.hours>10?timeData.hours:'0'+timeData.hours }}</text>
 						</view>
 						<text class="time__doc">:</text>
 						<view class="time__custom">
@@ -77,21 +75,20 @@
 				    ref="countDown"
 				    :time="3* 1000"
 				    format="ss:SSS"
-				    :autoStart="false"
+				    :auto-start="false"
 				    millisecond
-				>
-				</u-count-down>
+				/>
 			</view>
 			<u-grid
 			    :border="true"
-			    :customStyle="{marginTop:10+'px'}"
+			    :custom-style="{marginTop:10+'px'}"
 			>
 				<u-grid-item @click="reset">
 					<view class="count-down__grid-item">
 						<u-icon
 						    name="reload"
 						    :size="22"
-						></u-icon>
+						/>
 						<text class="count-down__grid-item__grid-text">重置</text>
 					</view>
 				</u-grid-item>
@@ -102,7 +99,7 @@
 							    color="#fff"
 							    name="play-right-fill"
 							    :size="22"
-							></u-icon>
+							/>
 						</view>
 						<text class="count-down__grid-item__grid-text">开始</text>
 					</view>
@@ -112,7 +109,7 @@
 						<u-icon
 						    name="pause-circle"
 						    :size="22"
-						></u-icon>
+						/>
 						<text class="count-down__grid-item__grid-text">暂停</text>
 					</view>
 				</u-grid-item>
@@ -122,41 +119,41 @@
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				timeData: {},
-			}
-		},
-		onLoad() {
+export default {
+    data() {
+        return {
+            timeData: {}
+        }
+    },
+    onLoad() {
 
-		},
-		methods: {
-			//开始
-			start() {
-				this.$refs.countDown.start();
-			},
-			// 暂停
-			pause() {
-				this.$refs.countDown.pause();
-			},
-			// 重置
-			reset() {
-				this.$refs.countDown.reset();
-			},
-			onChange(e) {
-				this.timeData = e
-			},
-			finish() {
-				console.log('finish');
-			}
-		}
-	}
+    },
+    methods: {
+        // 开始
+        start() {
+            this.$refs.countDown.start()
+        },
+        // 暂停
+        pause() {
+            this.$refs.countDown.pause()
+        },
+        // 重置
+        reset() {
+            this.$refs.countDown.reset()
+        },
+        onChange(e) {
+            this.timeData = e
+        },
+        finish() {
+            console.log('finish')
+        }
+    }
+}
 </script>
 
 <style lang="scss">
 	.u-page {
-		
+
 	}
 
 	.time {
@@ -167,7 +164,7 @@
 			margin-top: 4px;
 			width: 22px;
 			height: 22px;
-			background-color: $u-primary;
+			background-color: $color-primary;
 			border-radius: 4px;
 			/* #ifndef APP-NVUE */
 			display: flex;
@@ -183,7 +180,7 @@
 		}
 
 		&__doc {
-			color: $u-primary;
+			color: $color-primary;
 			padding: 0px 4px;
 		}
 
@@ -217,7 +214,7 @@
 				width: 32px;
 				height: 32px;
 				border-radius: 32px;
-				background-color: $u-primary;
+				background-color: $color-primary;
 				/* #ifndef APP-NVUE */
 				display: flex;
 				/* #endif */

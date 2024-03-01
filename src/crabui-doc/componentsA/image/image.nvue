@@ -24,8 +24,8 @@
             <view class="u-demo-block__content">
                 <view class="u-page__image-item">
                     <ca-image
-radius="24" :src="src" width="80px" height="80px" border
-:border-color="'#ff0000'" />
+                        radius="24" :src="src" width="80px" height="80px" border
+                        :border-color="'#ff0000'" />
                 </view>
             </view>
         </view>
@@ -41,10 +41,7 @@ radius="24" :src="src" width="80px" height="80px" border
             <text class="u-demo-block__title">自定义图片加载插槽</text>
             <view class="u-demo-block__content">
                 <view class="u-page__image-item">
-                    <ca-image
-                        :src="src1" width="80px" height="80px" mode="widthFit" show-loading
-                        is-effect
-                        :duration="2000" />
+                    <ca-image :src="src1" width="80px" height="80px" mode="widthFit" show-loading />
                 </view>
             </view>
         </view>

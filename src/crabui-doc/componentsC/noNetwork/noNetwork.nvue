@@ -59,7 +59,7 @@
 		}
 
 		&__tips {
-			color: $u-tips-color;
+			color: $color-info;
 			font-size: 13px;
 			margin-top: 15px;
 			text-align: center;
