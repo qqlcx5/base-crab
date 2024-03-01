@@ -3,15 +3,15 @@ export default [
         groupName: '基础组件',
         groupName_en: 'Basic components',
         list: [
-            {
-                path: '/pages/componentsB/color/color',
-                icon: 'ca-color',
-                title: 'Color 色彩',
-                title_en: 'Color'
-            },
+            // {
+            //     path: '/pages/componentsB/color/color',
+            //     icon: 'ca-color',
+            //     title: 'Color 色彩',
+            //     title_en: 'Color'
+            // },
             {
                 path: '/pages/componentsA/icon/icon',
-                icon: 'ca-icon',
+                icon: 'ca-aixin1',
                 title: 'Icon 图标',
                 title_en: 'Icon'
             },
@@ -27,12 +27,12 @@ export default [
                 title: 'Button 按钮',
                 title_en: 'Button'
             },
-            {
-                path: '/pages/componentsC/text/text',
-                icon: 'ca-text',
-                title: 'Text 文本',
-                title_en: 'Text'
-            },
+            // {
+            //     path: '/pages/componentsC/text/text',
+            //     icon: 'ca-text',
+            //     title: 'Text 文本',
+            //     title_en: 'Text'
+            // },
             {
                 path: '/pages/componentsC/layout/layout',
                 icon: 'ca-layout',
