@@ -136,14 +136,14 @@ export const routes = [
     {
         path: '/pages/componentsB/search/search',
         name: 'search',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsB/search/search.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsB/search/search.vue', {
             pageType: 'top'
         })
     },
     {
         path: '/pages/componentsB/numberBox/numberBox',
         name: 'numberBox',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsB/numberBox/numberBox.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsB/numberBox/numberBox.vue', {
             pageType: 'top'
         })
     },
