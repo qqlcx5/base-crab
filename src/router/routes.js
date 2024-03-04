@@ -150,7 +150,7 @@ export const routes = [
     {
         path: '/pages/componentsB/upload/upload',
         name: 'upload',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsB/upload/upload.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsB/upload/upload.vue', {
             pageType: 'top'
         })
     },
