@@ -71,7 +71,7 @@ export const routes = [
     {
         path: '/pages/componentsA/rate/rate',
         name: 'rate',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsA/rate/rate.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsA/rate/rate.vue', {
             pageType: 'top'
         })
     },
@@ -107,14 +107,14 @@ export const routes = [
     {
         path: '/pages/componentsC/form/form',
         name: 'form',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsC/form/form.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsC/form/form.vue', {
             pageType: 'top'
         })
     },
     {
         path: '/pages/componentsC/calendar/calendar',
         name: 'calendar',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsC/calendar/calendar.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsC/calendar/calendar.vue', {
             pageType: 'top'
         })
     },
@@ -122,14 +122,14 @@ export const routes = [
     {
         path: '/pages/componentsB/keyboard/keyboard',
         name: 'keyboard',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsB/keyboard/keyboard.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsB/keyboard/keyboard.vue', {
             pageType: 'top'
         })
     },
     {
         path: '/pages/componentsC/picker/picker',
         name: 'picker',
-        component: __dynamicImportComponent__('@/crabui-doc/componentsC/picker/picker.nvue', {
+        component: __dynamicImportComponent__('@/crabui-doc/componentsC/picker/picker.vue', {
             pageType: 'top'
         })
     },

@@ -129,3 +129,10 @@ export function colorToRgba(color, alpha = 0.3) {
         return sColor
     }
 }
+
+export default {
+    colorGradient,
+    hexToRgb,
+    rgbToHex,
+    colorToRgba
+}

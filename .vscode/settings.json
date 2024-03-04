@@ -1,5 +1,7 @@
 {
-    "i18n-ally.localesPaths": [
-        "src/locale"
-    ]
+  "i18n-ally.localesPaths": ["src/locale"],
+  "[vue]": {
+    // "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "Vue.volar"
+  }
 }

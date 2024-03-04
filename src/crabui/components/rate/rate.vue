@@ -1,4 +1,3 @@
-
 <template>
     <view
         class="ca-rate"
