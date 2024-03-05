@@ -18,6 +18,13 @@ export const routes = [
         })
     },
     {
+        path: '/pages/user/login',
+        name: 'login',
+        component: __dynamicImportComponent__('@/pages/user/login/index.vue', {
+            pageType: 'top'
+        })
+    },
+    {
         path: '/crabui-doc/example',
         name: 'crabuiDoc',
         component: __dynamicImportComponent__('@/crabui-doc/example/components.vue', {
