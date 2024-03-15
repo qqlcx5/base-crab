@@ -25,6 +25,14 @@ export const routes = [
         })
     },
     {
+        path: '/pages/user/sms-login',
+        name: 'smsLogin',
+        component: __dynamicImportComponent__('@/pages/user/login/sms-login.vue', {
+            pageType: 'top'
+        })
+    },
+
+    {
         path: '/crabui-doc/example',
         name: 'crabuiDoc',
         component: __dynamicImportComponent__('@/crabui-doc/example/components.vue', {
