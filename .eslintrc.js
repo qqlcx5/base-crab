@@ -65,6 +65,7 @@ module.exports = {
             ignores: []
         }],
         camelcase: 0,
+        'no-unused-vars': 0,
         // vue文件name值规格，不采用驼峰
         'vue/multi-word-component-names': 0
     }

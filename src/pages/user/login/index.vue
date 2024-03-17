@@ -1,32 +1,27 @@
 <template>
-    <view v-show="finish_" class="home-login-content">
+    <view class="home-login-content">
         <view class="login-hd ca-flex-column ca-align-center">
-            <ca-image size="120" radius="60" src="/static/download/bg.png" err-src="common/shop-map-error.png" />
+            <ca-image size="120" radius="60" src="/static/download/bg.png" />
             <view class="ca-fs-36 ca-mt-40 ca-ellipsis ca-width-full ca-plr-24 ca-tc ca-text">欢迎使用笔记应用</view>
         </view>
         <swiper class="login-bd" :current="pageIndex" :duration="300">
             <swiper-item class="login-item" @touchmove.stop="stopTouchMove">
                 <view class="login-item-box">
                     <template v-if="wechatType === 'login'">
-                        <ca-button type="success" size="large" @click="handleUserInfo(false, false, true)">
+                        <ca-button type="success" radius="50" size="large" @click="handleUserInfo(false, false, true)">
                             微信授权一键登录
                         </ca-button>
                     </template>
                     <template v-else>
                         <ca-button
-                            :open-type="wechatType" size="large" type="success"
+                            :open-type="wechatType" radius="50" size="large" type="success"
                             @getphonenumberencry="handlePhoneNumber" @getuserinfoencry="handleUserInfo">
                             微信授权一键登录
                         </ca-button>
                     </template>
-                    <ca-mask
+                    <!-- <ca-mask
                         v-if="!agreeCheck" position="absolute" z-index="10" show bg-color="rgba(255, 255, 255, 0)"
-                        @click="handleAgree" />
-                </view>
-                <view class="ca-mb-32">
-                    <ca-button size="large" plain @click="jump('sms-login')">
-                        手机号码登录/注册
-                    </ca-button>
+                        @click="handleAgree" /> -->
                 </view>
                 <view class="copyright ca-fs-24 ca-gray">
                     <ca-checkbox-group active-color="#329AFF" @change="handleChange">
@@ -46,76 +41,123 @@
                 </ca-button>
             </swiper-item>
         </swiper>
+        <view class="login-other-bottom">
+            <view class="ca-underline">
+                <view class="ca-other-login">
+                    其他方式登录
+                </view>
+            </view>
+            <view class=" ca-mt-68 ca-flex ca-flex-column ca-justify-center ca-align-center">
+                <ca-image size="88" radius="60" src="/static/download/bg.png" />
+                <view class="ca-text ca-pt-20">
+                    手机号登录
+                </view>
+            </view>
+        </view>
     </view>
 </template>
-
-<script>
-// import loginMainMixins from '@/common/mixins/login'
-export default {
-    // mixins: [loginMainMixins],
-    data() {
-        return {
-            shopInfo_: {},
-            finish_: true,
-            agreeCheck: true
-        }
-    },
-    onLoad() {
-        console.log(new Date(), 'onLoad')
+<script setup>
+import { ref } from 'vue'
+const { jump } = uni.$ca.useRouter()
+const handleTel = () => {
+    jump('smsLogin')
+}
+const handleAgree = () => {
+    agreeCheck.value = !agreeCheck.value
+}
+const handleChange = (e) => {
+    agreeCheck.value = e.detail.value.length > 0
+}
+const handleUserInfo = (e, isBind, isLogin) => {
+    if (isBind) {
+        jump('bindWechat')
+    } else if (isLogin) {
+        uni.$ca.login(e).then((res) => {
+            if (res) {
+                uni.$ca.showToast('登录成功')
+                jump('index')
+            }
+        })
+    } else {
+        uni.$ca.login(e).then((res) => {
+            if (res) {
+                uni.$ca.showToast('登录成功')
+                jump('index')
+            }
+        })
     }
 }
+const handleBindWechat = (e) => {
+    uni.$ca.login(e).then((res) => {
+        if (res) {
+            uni.$ca.showToast('绑定成功')
+            jump('index')
+        }
+    })
+}
+const handlePhoneNumber = (e) => {
+    uni.$ca.login(e).then((res) => {
+        if (res) {
+            uni.$ca.showToast('登录成功')
+            jump('index')
+        }
+    })
+}
+const stopTouchMove = (e) => {
+    e.stopPropagation()
+}
+const pageIndex = ref(0)
+const agreeCheck = ref(false)
+const finish_ = ref(true)
+const wechatType = ref('login')
 </script>
 
 <style lang="scss">
 .home-login-content {
-    padding: 170rpx 0 40rpx;
+  padding: 170rpx 0 40rpx;
 
-    .login-hd {
-        position: relative;
-    }
+  .login-hd {
+    position: relative;
+  }
 
-    .login-bd {
-        margin-top: 170rpx;
-        height: 400rpx;
+  .login-bd {
+    margin-top: 170rpx;
+    height: 400rpx;
+    width: 100%;
+
+    .login-item {
+      padding: 0 48rpx;
+      position: relative;
+
+      .ca-button--large {
         width: 100%;
+        margin-bottom: 24rpx;
+      }
 
-        .login-item {
-            padding: 0 48rpx;
-            position: relative;
-            .ca-button--large {
-                width: 100%;
-                margin-bottom: 24rpx;
-            }
-
-            &-box {
-                position: relative;
-            }
-        }
+      &-box {
+        position: relative;
+      }
     }
+  }
 
-    // .login-text {
-    //     @include abs(null, 0, -130rpx, 0);
-    // }
-    .copyright {
-        // font-size: 24rpx;
-        color: #999999;
+  .copyright {
+    color: #999999;
 
-        &-link {
-            color: #116cff;
-        }
-
-        // /deep/ .c-checkbox__label {
-        //     margin-right: 0;
-        // }
+    &-link {
+      color: #116cff;
     }
-
-    // /deep/ .c-input-box {
-    //     margin: 0 40rpx;
-    //     background-color: #f5f5f5;
-    //     border-radius: 16rpx;
-    //     .c-underline::after {
-    //         display: none;
-    //     }
-    // }
+  }
+}
+.login-other-bottom {
+  @include abs(null, 0, 100rpx, 0);
+}
+.ca-other-login {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+  @include siteCenter();
+  color: rgba(173, 179, 184, 1);
+  background-color: #FAFAFA;
+  z-index: 10;
 }
 </style>

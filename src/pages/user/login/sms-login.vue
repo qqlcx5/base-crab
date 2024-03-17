@@ -7,9 +7,8 @@
             <ca-cell-group>
                 <ca-cell border :cell-style="cellStyle" :line-style="lineStyle">
                     <ca-input
-                        v-model="formData[formList[0].prop]" :type="formList[0].type"
-                        :placeholder="formList[0].placeholder" :maxlength="formList[0].maxlength"
-                        @input="handleInputMobile">
+                        v-model="formData[formList[0].prop]" :type="formList[0].type" :placeholder="formList[0].placeholder"
+                        :maxlength="formList[0].maxlength" @input="handleInputMobile">
                         <ca-button class="ca-btn-sms" @click="handleSendSMSCode">
                             <!-- 已经授权过的话  不要调用发送验证码 -->
                             <ca-send-sms-code ref="sendSmsEle" text-color="#116CFF" mode="static" phone-key="mobile" />
@@ -24,25 +23,19 @@
                 </ca-cell>
                 <ca-cell border :cell-style="cellStyle" :line-style="lineStyle">
                     <ca-input
-                        v-model="formData[formList[1].prop]" :type="formList[1].type"
-                        :maxlength="formList[1].maxlength" :placeholder="formList[1].placeholder"
-                        @confirm="handleSubmit" />
+                        v-model="formData[formList[1].prop]" :type="formList[1].type" :maxlength="formList[1].maxlength"
+                        :placeholder="formList[1].placeholder" @confirm="handleSubmit" />
                 </ca-cell>
-                <ca-cell
-                    v-if="showInviteInput && needInvitationCode_" border :cell-style="cellStyle"
-                    :line-style="lineStyle">
+                <ca-cell v-if="showInviteInput && needInvitationCode_" border :cell-style="cellStyle" :line-style="lineStyle">
                     <ca-input
-                        v-model="formData[formList[2].prop]" :type="formList[2].type"
-                        :maxlength="formList[2].maxlength" :placeholder="formList[2].placeholder"
-                        @confirm="handleSubmit" />
+                        v-model="formData[formList[2].prop]" :type="formList[2].type" :maxlength="formList[2].maxlength"
+                        :placeholder="formList[2].placeholder" @confirm="handleSubmit" />
                 </ca-cell>
                 <ca-cell :cell-style="cellStyle">
                     <view class="ca-pt-48">
-                        <ca-colors :pro="['bgc', 'c']" :theme="theme_" radius="16">
-                            <ca-button size="large" @click="handleSubmit">
-                                登录
-                            </ca-button>
-                        </ca-colors>
+                        <ca-button size="large" @click="handleSubmit">
+                            登录
+                        </ca-button>
                     </view>
                 </ca-cell>
             </ca-cell-group>
@@ -53,17 +46,6 @@
                     <ca-checkbox label-size="26" name="1" :checked="agreeCheck">
                         请先阅读并同意
                     </ca-checkbox>
-                    <text
-                        v-if="agreement.status === 1" class="copyright-link"
-                        @click="$jumpDetail('agreement', agreement.id)">
-                        《{{ agreement.title }}》
-                    </text>
-                    <text v-if="agreement.status === 1 && privacy.status === 1">和</text>
-                    <text
-                        v-if="privacy.status === 1" class="copyright-link"
-                        @click="$jumpDetail('agreement', privacy.id)">
-                        《{{ privacy.title }}》
-                    </text>
                 </view>
             </ca-checkbox-group>
         </view>
@@ -90,8 +72,8 @@
                     </view>
                 </ca-button>
                 <ca-button
-                    v-else height="152" :open-type="wechatType" size="large"
-                    @getphonenumberencry="handlePhoneNumber" @getuserinfoencry="handleUserInfo">
+                    v-else height="152" :open-type="wechatType" size="large" @getphonenumberencry="handlePhoneNumber"
+                    @getuserinfoencry="handleUserInfo">
                     <view class="ca-flex-column-ajcenter">
                         <ca-image src="login/wechat.png" size="88" />
                         <text class="ca-fs-28 ca-text ca-mt-24">微信登录</text>
@@ -109,6 +91,11 @@ export default {
     // mixins: [loginMainMixins],
     data() {
         return {
+            agreement: {
+                status: 1,
+                title: '用户协议',
+                id: 1
+            },
             formData: {
                 mobile: '', // 手机号码
                 sms_code: '', // 短信验证码
@@ -164,8 +151,8 @@ export default {
     onLoad() {
     },
     methods: {
-        // 获取用户信息，并发送短信验证码，方便跟手机号一起绑定
-        // #ifdef MP-WEIXIN
+    // 获取用户信息，并发送短信验证码，方便跟手机号一起绑定
+    // #ifdef MP-WEIXIN
         async handleSendSMSCode(data = {}) {
             const mobile = this.formData.mobile
             if (!mobile) {
@@ -215,10 +202,10 @@ export default {
             if (this.disabled_) return
             console.log('账号或密码全')
             /**
-             * 1微信小程序端验证码
-             * 2公众号端验证码
-             * 3H5端纯手机验证码
-            */
+       * 1微信小程序端验证码
+       * 2公众号端验证码
+       * 3H5端纯手机验证码
+      */
             let type = 1
             // #ifdef H5
             type = this.$isWechatBrowser ? 2 : 3
@@ -255,7 +242,7 @@ export default {
 
 <style lang="scss">
 page {
-    height: 100%;
+  height: 100%;
 }
 </style>
 
@@ -278,37 +265,24 @@ page {
                 color: #116cff;
             }
 
-            /deep/ .ca-checkbox__label {
-                margin-right: 0;
-            }
         }
 
-        /deep/ .ca-input-bd {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
+        // /deep/ .ca-input-bd {
+        //     padding-left: 0 !important;
+        //     padding-right: 0 !important;
+        // }
 
-        .ca-btn-sms /deep/ .ca-btn {
-            padding: 0;
-        }
+        // /deep/ .ca-input-box {
+        //     margin: 0 40rpx;
+        //     background-color: #f5f5f5;
+        //     border-radius: 16rpx;
 
-        /deep/ .ca-input-box {
-            margin: 0 40rpx;
-            background-color: #f5f5f5;
-            border-radius: 16rpx;
-
-            .ca-underline::after {
-                display: none;
-            }
-        }
+        //     .ca-underline::after {
+        //         display: none;
+        //     }
+        // }
     }
 
-    // &__title {
-    //     font-size: 56rpx;
-    //     font-weight: bold;
-    //     color: $color-text;
-    //     line-height: 78rpx;
-    // }
     &-fd {
         // @include fixed(null, 0, 180rpx, 0);
         // margin-top: 80rpx;
@@ -317,7 +291,6 @@ page {
         &__text {
             margin-top: 24rpx;
             font-size: 28rpx;
-            color: $color-text;
             line-height: 40rpx;
         }
     }
